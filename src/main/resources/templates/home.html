@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="home.css"/>
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="/">Home</a></li>
+        <li><a href="/products">Products</a></li>
+        <li class="search"><a href="/search">Search</a></li>
+    </ul>
+    <p>
+       We have the best products, make sure to buy everything so we can get so rich
+    </p>
+
+    <form action="#" th:action="@{/products}" th:object="${product}" method="post">
+        <span>Enter name: </span> <input th:field="*{name}"/>
+        <span>Enter brand: </span> <input th:field="*{brand}"/>
+        <span>Enter price: </span> <input th:field="*{price}"/>
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+
+
+
+</body>
+</html>
